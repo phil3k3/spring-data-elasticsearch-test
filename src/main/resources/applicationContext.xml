@@ -8,8 +8,13 @@
 
 
     <elasticsearch:node-client id="client" local="true"/>
+    <bean name="mappingContext" class="org.springframework.data.elasticsearch.core.mapping.SimpleElasticsearchMappingContext" />
+    <bean name="results_mapper" class="com.test.service.HierarchyResultsMapper">
+        <constructor-arg ref="mappingContext" />
+    </bean>
     <bean name="elasticsearchTemplate" class="org.springframework.data.elasticsearch.core.ElasticsearchTemplate">
         <constructor-arg ref="client"/>
+        <constructor-arg ref="results_mapper" />
     </bean>
 
     <elasticsearch:repositories base-package="com.test.repository"/>

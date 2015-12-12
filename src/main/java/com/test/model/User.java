@@ -1,18 +1,14 @@
 package com.test.model;
 
-import org.springframework.data.elasticsearch.annotations.Document;
+public class User extends Entity {
 
-@Document(indexName="userstest")
-public class User {
-
-    private Long id;
     private String firstName;
     private String surname;
 
     public User(String firstName, String surname, Long id) {
+        super(id);
         this.firstName = firstName;
         this.surname = surname;
-        this.id = id;
     }
 
     public User() {
@@ -27,11 +23,4 @@ public class User {
         return surname;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 }
