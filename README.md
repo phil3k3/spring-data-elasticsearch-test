@@ -12,4 +12,4 @@ The example assumes having a simple class hierarchy of one base class and two su
 Basically two steps were required to make this work:
 
 * Find the sub classes of the base class, convert them to the corresponding document's \_type and add them to the SearchQuery
-* Provide a custom ResultsMapper which looks up the actual class from the result document's \_type and use this class for mapping the JSON result back to Java
+* Provide a custom ResultsMapper which looks up the actual class from the result document's \_type and uses that class for mapping the JSON result back to a Java object
