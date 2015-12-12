@@ -1,8 +1,5 @@
 package com.test.service;
 
-import com.test.model.Book;
-import com.test.model.Entity;
-import com.test.model.User;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.common.base.Strings;
 import org.elasticsearch.common.collect.Lists;
